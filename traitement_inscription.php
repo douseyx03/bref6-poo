@@ -10,7 +10,7 @@ class Utilisateur {
     public function Inscription($prenom, $nom, $telephone, $email, $password, $password_retype) {
         if ($this->validerPrenom($prenom) && $this->validerNom($nom) && $this->validerTelephone($telephone) && $this->validerEmail($email) && $this->validerMotDePasse($password, $password_retype)) {
             // Connexion à la base de données (assurez-vous de configurer la connexion)
-            $db = new PDO("mysql:host=localhost;dbname=bref6: poo", "root", "v");
+            $db = new PDO("mysql:host=localhost;dbname=bref6: poo", "root", " ");
 
             $query = "INSERT INTO utilisateurs (prenom, nom, telephone, email, password) VALUES (:prenom, :nom, :telephone, :email, :password)";
             $stmt = $db->prepare($query);
@@ -66,4 +66,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $utilisateur->Inscription($prenom, $nom, $telephone, $email, $password, $password_retype);
 }
 ?>
-*/
