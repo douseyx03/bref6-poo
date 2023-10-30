@@ -42,7 +42,7 @@ class Utilisateur {
     private $db;
 
     public function __construct() {
-        // Initialisez la connexion à la base de données (à adapter en fonction de vos paramètres)
+        //  la connexion à la base de données
         $dsn = "mysql:host=localhost;dbname=bref6: poo";
         $user = "root";
         $pass = "";

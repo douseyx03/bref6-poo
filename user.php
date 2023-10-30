@@ -25,7 +25,7 @@ class Utilisateur {
         $query = "INSERT INTO utilisateurs (prenom, nom, telephone, email, password) VALUES (:prenom, :nom, :telephone, :email, :password)";
         $stmt = $this->db->prepare($query);
 
-        // Liaison des valeurs
+        // les valeurs
         $stmt->bindParam(':prenom', $prenom);
         $stmt->bindParam(':nom', $nom);
         $stmt->bindParam(':telephone', $telephone);
